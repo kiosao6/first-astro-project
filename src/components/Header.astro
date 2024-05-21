@@ -1,4 +1,6 @@
 ---
+import HeaderButton from "./HeaderButton.astro"
+
 console.log('header.astro')
 ---
 
@@ -13,7 +15,17 @@ console.log('header.astro')
     </p>
   </div>
   <nav class="flex flex-col text-white items-center justify-between w-full text-center md:flex-row">
-    <a href="/">Últimos lanzamientos de Space X</a>
-    <a href="/oldest">Los más antiguos</a>
+    <HeaderButton href="/">
+      <p slot="before">hola</p>
+      Últimos lanzamientos de Space X
+    </HeaderButton>
+    <HeaderButton href="/about">
+      <p>soy</p>
+      Sobre el proyecto
+    </HeaderButton>
+    <HeaderButton href="/oldest">
+      <p slot="after">Gabriel</p>
+      Los más antiguos
+    </HeaderButton>
   </nav>
 </header>
